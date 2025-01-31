@@ -3,7 +3,7 @@ import Die from "./Die"
 import { nanoid } from "nanoid"
 import Confetti from "react-confetti"
 import { useWindowSize } from 'react-use'
-import sound from "./assets/sound2.wav"
+
 
 export default function App() { 
     const [dice, setDice] = useState(() => generateAllNewDice())
@@ -12,9 +12,7 @@ export default function App() {
     const gameWon = dice.every(die => die.isHeld) &&
         dice.every(die => die.value === dice[0].value)
 
-    if (gameWon) {
-        new Audio(sound).play()
-    }
+
     function generateAllNewDice() {
         return new Array(10)
             .fill(0)
