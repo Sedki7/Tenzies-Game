@@ -16,7 +16,6 @@ export default function App() {
         dice.every((die) => die.value === dice[0].value);
     if (gameWon) {
         const song = audioRef.current;
-        console.log("sdasd");
         song.pause();
         const fullSong = fullAudioRef.current;
         fullSong.currentTime = 0;
